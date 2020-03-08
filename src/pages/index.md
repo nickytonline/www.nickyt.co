@@ -5,17 +5,13 @@ sections:
     component: HeroBlock
     type: heroblock
     content: >-
-      This section can contain a subtitle or tagline. The recommended length is
-      one to three sentences, but can be changed as you prefer.
+      I am a Senior Software Developer at DEV working on all things DEV. I do not get along with spiders.
   - section_id: about
     component: ContentBlock
     type: contentblock
     title: About
     content: >-
-      This is the "about" excerpt. It can be used to provide a paragraph about
-      yourself that people can read on the homepage to get a sense of who you
-      are. There also exists a dedicated about page where you can write more
-      about yourself for those who are interested.
+      I am a big fan of TypeScript, JavaScript, Preact/React, Node and pretty much anything web. I enjoy contributing to open source. Once upon a time, I was into C#/ASP.NET. Aside from programming, I enjoy hitting the gym, snowboarding in the winter and a long long time ago, rugby.
     actions:
       - label: Contact Me
         url: /contact
@@ -25,7 +21,7 @@ sections:
     title: Recent Posts
     num_posts_displayed: 4
     actions:
-      - label: View Blog
+      - label: Blog
         url: blog/index.html
 menus:
   main:
