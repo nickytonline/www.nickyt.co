@@ -15,6 +15,7 @@ export default class Body extends React.Component {
                     <meta charSet="utf-8"/>
                     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                     <meta name="google" content="notranslate" />
+                    <meta name="description" content={(_.get(this.props, 'pageContext.frontmatter.template') === 'post') ? _.get(this.props, 'pageContext.frontmatter.excerpt') : `Welcome to Nick Taylor's Web Site`} />
                     <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i" rel="stylesheet"/>
                     <link rel="stylesheet" href={safePrefix('assets/css/main.css')}/>
                     {(_.get(this.props, 'pageContext.frontmatter.template') === 'post') &&
