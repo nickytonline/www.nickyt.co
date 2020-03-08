@@ -1,0 +1,22 @@
+{
+    "links": [
+        {
+            "type": "twitter",
+            "title": "Twitter",
+            "icon": "fa-twitter",
+            "url": "https://twitter.com/nickytonline"
+        },
+        {
+            "type": "github",
+            "title": "GitHub",
+            "icon": "fa-github",
+            "url": "https://github.com/nickytonline"
+        },
+        {
+            "type": "devto",
+            "title": "DEV",
+            "icon": "fa-dev",
+            "url": "https://dev.to/nickytonline"
+        }
+    ]
+}
