@@ -13,14 +13,14 @@ export default class Post extends React.Component {
                 <header className="post-header">
                   <h1 className="post-title underline">{_.get(this.props, 'pageContext.frontmatter.title')}</h1>
                 </header>
-                {_.get(this.props, 'pageContext.frontmatter.subtitle') && 
+                {_.get(this.props, 'pageContext.frontmatter.subtitle') &&
                 <div className="post-subtitle">
                   {htmlToReact(_.get(this.props, 'pageContext.frontmatter.subtitle'))}
                 </div>
                 }
-                {_.get(this.props, 'pageContext.frontmatter.content_img_path') && 
+                {_.get(this.props, 'pageContext.frontmatter.content_img_path') &&
                 <div className="post-thumbnail">
-                  <img src={safePrefix(_.get(this.props, 'pageContext.frontmatter.content_img_path'))} alt={_.get(this.props, 'pageContext.frontmatter.title')} />
+                  <img src={safePrefix(_.get(this.props, 'pageContext.frontmatter.content_img_path'))} alt={_.get(this.props, 'pageContext.frontmatter.title')} loading="lazy" />
                 </div>
                 }
                 <div className="post-content">

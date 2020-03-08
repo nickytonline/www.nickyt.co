@@ -11,28 +11,28 @@ export default class Header extends React.Component {
               <div className="site-header-wrap">
                 <div className="site-header-inside">
                   <div className="site-branding">
-                    {_.get(this.props, 'pageContext.site.siteMetadata.header.profile_img') && 
+                    {_.get(this.props, 'pageContext.site.siteMetadata.header.profile_img') &&
                     <p className="profile">
                       <Link to={safePrefix('/')}><img src={safePrefix(_.get(this.props, 'pageContext.site.siteMetadata.header.profile_img'))}
-                          className="avatar" alt="Author Avatar" /></Link>
+                          className="avatar" alt="Author Avatar" loading="lazy" /></Link>
                     </p>
                     }
                     <div className="site-identity">
-                      {((_.get(this.props, 'pageContext.frontmatter.template') === 'home') || (_.get(this.props, 'pageContext.frontmatter.template') === 'blog')) ? 
+                      {((_.get(this.props, 'pageContext.frontmatter.template') === 'home') || (_.get(this.props, 'pageContext.frontmatter.template') === 'blog')) ?
                       <h1 className="site-title"><Link to={safePrefix('/')}>{_.get(this.props, 'pageContext.site.siteMetadata.header.title')}</Link></h1>
-                       : 
+                       :
                       <p className="site-title"><Link to={safePrefix('/')}>{_.get(this.props, 'pageContext.site.siteMetadata.header.title')}</Link></p>
                       }
-                      {_.get(this.props, 'pageContext.site.siteMetadata.header.tagline') && 
+                      {_.get(this.props, 'pageContext.site.siteMetadata.header.tagline') &&
                       <p className="site-description">{_.get(this.props, 'pageContext.site.siteMetadata.header.tagline')}</p>
                       }
                     </div>
-                    {(_.get(this.props, 'pageContext.menus.main') && _.get(this.props, 'pageContext.site.siteMetadata.header.has_nav')) && 
+                    {(_.get(this.props, 'pageContext.menus.main') && _.get(this.props, 'pageContext.site.siteMetadata.header.has_nav')) &&
                     <button id="menu-toggle" className="menu-toggle"><span className="screen-reader-text">Menu</span><span className="icon-menu"
                         aria-hidden="true" /></button>
                     }
                   </div>
-                  {(_.get(this.props, 'pageContext.menus.main') && _.get(this.props, 'pageContext.site.siteMetadata.header.has_nav')) && 
+                  {(_.get(this.props, 'pageContext.menus.main') && _.get(this.props, 'pageContext.site.siteMetadata.header.has_nav')) &&
                   <nav id="main-navigation" className="site-navigation" aria-label="Main Navigation">
                     <div className="site-nav-wrap">
                       <div className="site-nav-inside">
@@ -43,7 +43,7 @@ export default class Header extends React.Component {
                           </li>
                           ))}
                         </ul>
-                        {_.get(this.props, 'pageContext.site.siteMetadata.header.has_social') && 
+                        {_.get(this.props, 'pageContext.site.siteMetadata.header.has_social') &&
                         <Social {...this.props} />
                         }
                       </div>

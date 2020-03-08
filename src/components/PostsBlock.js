@@ -15,9 +15,9 @@ export default class PostsBlock extends React.Component {
                 {_.map(recent_posts, (post, post_idx) => (
                 <article key={post_idx} className="post">
                   <div className="post-inside">
-                    {_.get(post, 'frontmatter.thumb_img_path') && 
+                    {_.get(post, 'frontmatter.thumb_img_path') &&
                     <Link className="post-thumbnail" to={safePrefix(_.get(post, 'url'))}><img className="thumbnail"
-                        src={safePrefix(_.get(post, 'frontmatter.thumb_img_path'))} alt={_.get(post, 'frontmatter.title')} /></Link>
+                        src={safePrefix(_.get(post, 'frontmatter.thumb_img_path'))} alt={_.get(post, 'frontmatter.title')} loading="lazy" /></Link>
                     }
                     <header className="post-header">
                       <h3 className="post-title"><Link to={safePrefix(_.get(post, 'url'))} rel="bookmark">{_.get(post, 'frontmatter.title')}</Link></h3>
@@ -33,7 +33,7 @@ export default class PostsBlock extends React.Component {
                 </article>
                 ))}
               </div>
-              {_.get(this.props, 'section.actions') && 
+              {_.get(this.props, 'section.actions') &&
               <p className="block-cta">
                 {_.map(_.get(this.props, 'section.actions'), (action, action_idx) => (
                 <Link key={action_idx} to={safePrefix(_.get(action, 'url'))} className="button">{_.get(action, 'label')}</Link>

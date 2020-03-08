@@ -14,9 +14,9 @@ export default class Blog extends React.Component {
                 {_.map(display_posts, (post, post_idx) => (
                 <article key={post_idx} className="post">
                   <div className="post-inside">
-                    {_.get(post, 'frontmatter.thumb_img_path') && 
+                    {_.get(post, 'frontmatter.thumb_img_path') &&
                     <Link className="post-thumbnail" to={safePrefix(_.get(post, 'url'))}>
-                      <img className="thumbnail" src={safePrefix(_.get(post, 'frontmatter.thumb_img_path'))} alt={_.get(post, 'frontmatter.title')} />
+                      <img className="thumbnail" src={safePrefix(_.get(post, 'frontmatter.thumb_img_path'))} alt={_.get(post, 'frontmatter.title')} loading="lazy" />
                     </Link>
                     }
                     <header className="post-header">
