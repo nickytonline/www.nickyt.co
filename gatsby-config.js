@@ -39,7 +39,7 @@ module.exports = {
                 menus: require('./src/data/menus.json'),
             }
         },
-        'gatsby-plugin-offline',
+        // 'gatsby-plugin-offline',
         {
             resolve: 'gatsby-plugin-manifest',
             options: {
