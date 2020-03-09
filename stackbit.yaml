@@ -540,3 +540,20 @@ models:
         description: >-
           The identifier of a menu item could be used as a parent menu of
           another menu item
+    uses:
+      type: page
+      label: Uses
+      template: page
+      file: uses.md
+      hideContent: true
+      singleInstance: true
+      fields:
+        - type: string
+          name: title
+          label: Title
+          description: The title of the page.
+          required: true
+        - type: page_menus
+          name: menus
+          label: Home Menus
+          description: Which menus should this page show up in
