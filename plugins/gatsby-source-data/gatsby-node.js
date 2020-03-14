@@ -3,7 +3,6 @@ const yaml = require('js-yaml');
 const fse = require('fs-extra');
 const _ = require('lodash');
 
-
 async function readDirRecursively(dir) {
     const files = await fse.readdir(dir);
     const promises = _.map(files, async file => {
@@ -18,18 +17,21 @@ async function readDirRecursively(dir) {
         }
     });
     const recFiles = await Promise.all(promises);
-    return _.chain(recFiles).compact().flatten().value();
+    return _.chain(recFiles)
+        .compact()
+        .flatten()
+        .value();
 }
 
 const parsers = {
-    yaml: (data) => yaml.safeLoad(data, {schema: yaml.JSON_SCHEMA}),
-    json: (data) => JSON.parse(data)
+    yaml: data => yaml.safeLoad(data, { schema: yaml.JSON_SCHEMA }),
+    json: data => JSON.parse(data),
 };
 
 const supportedExtensions = {
-    'yaml': parsers.yaml,
-    'yml': parsers.yaml,
-    'json': parsers.json
+    yaml: parsers.yaml,
+    yml: parsers.yaml,
+    json: parsers.json,
 };
 
 function convertDataFilesToJSON(dataFiles, relativePath) {
@@ -41,7 +43,9 @@ function convertDataFilesToJSON(dataFiles, relativePath) {
             return null;
         }
         return fse.readFile(filePath).then(data => {
-            const propPath = _.compact(relDir.split(path.sep).concat(pathObject.name));
+            const propPath = _.compact(
+                relDir.split(path.sep).concat(pathObject.name),
+            );
             const parsedData = supportedExtensions[ext](data);
             const res = {};
             _.set(res, propPath, parsedData);
@@ -49,7 +53,7 @@ function convertDataFilesToJSON(dataFiles, relativePath) {
         });
     });
     return Promise.all(promises).then(results => {
-        return _.reduce(results, (data, res) => _.merge(data, res), {})
+        return _.reduce(results, (data, res) => _.merge(data, res), {});
     });
 }
 
@@ -62,27 +66,32 @@ exports.sourceNodes = (props, pluginOptions = {}) => {
     }
 
     if (!path.isAbsolute(pluginOptions.path)) {
-        pluginOptions.path = path.resolve(process.cwd(), pluginOptions.path)
+        pluginOptions.path = path.resolve(process.cwd(), pluginOptions.path);
     }
 
     if (!fse.existsSync(pluginOptions.path)) {
         return;
     }
 
-    return readDirRecursively(pluginOptions.path).then(dataFiles => {
-        const sortedDataFiles = dataFiles.slice().sort();
-        return convertDataFilesToJSON(sortedDataFiles, pluginOptions.path);
-    }).then(data => {
-        actions.createNode({
-            id: 'SiteData',
-            parent: null,
-            children: [],
-            data: data,
-            internal: {
-                type: 'SiteData',
-                contentDigest: createContentDigest(JSON.stringify(data)),
-                description: `Site data from ${path.relative(process.cwd(), pluginOptions.path)}`
-            }
+    return readDirRecursively(pluginOptions.path)
+        .then(dataFiles => {
+            const sortedDataFiles = dataFiles.slice().sort();
+            return convertDataFilesToJSON(sortedDataFiles, pluginOptions.path);
+        })
+        .then(data => {
+            actions.createNode({
+                id: 'SiteData',
+                parent: null,
+                children: [],
+                data: data,
+                internal: {
+                    type: 'SiteData',
+                    contentDigest: createContentDigest(JSON.stringify(data)),
+                    description: `Site data from ${path.relative(
+                        process.cwd(),
+                        pluginOptions.path,
+                    )}`,
+                },
+            });
         });
-    });
 };

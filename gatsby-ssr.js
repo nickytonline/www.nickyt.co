@@ -4,21 +4,16 @@
  * See: https://www.gatsbyjs.org/docs/ssr-apis/
  */
 
-const React = require("react");
-const safePrefix = require("./src/utils/safePrefix").default;
+const React = require('react');
+const safePrefix = require('./src/utils/safePrefix').default;
 
 exports.onRenderBody = function({ setHeadComponents, setPostBodyComponents }) {
-
-    setHeadComponents([
-        
-    ]);
+    setHeadComponents([]);
 
     setPostBodyComponents([
         <React.Fragment>
-            <script src={safePrefix('assets/js/plugins.js')}/>
-            <script src={safePrefix('assets/js/main.js')}/>
-            
-        </React.Fragment>
+            <script src={safePrefix('assets/js/plugins.js')} />
+            <script src={safePrefix('assets/js/main.js')} />
+        </React.Fragment>,
     ]);
-
 };

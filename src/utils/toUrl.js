@@ -5,7 +5,7 @@ export default function(pages, pagePath) {
         return pagePath;
     } else {
         pagePath = pagePath.replace(/^\//, '');
-        const page = _.find(pages, {relativePath: pagePath});
+        const page = _.find(pages, { relativePath: pagePath });
         if (!page) {
             throw new Error('could not find page with path: ' + pagePath);
         }

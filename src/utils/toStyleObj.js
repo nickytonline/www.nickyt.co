@@ -1,6 +1,6 @@
-import _ from "lodash";
+import _ from 'lodash';
 
-export default function (styleAttr) {
+export default function(styleAttr) {
     return styleAttr.split(';').reduce((accumulator, pair) => {
         pair = pair.trim();
         if (_.isEmpty(pair)) {

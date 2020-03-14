@@ -6,4 +6,4 @@ export default function(markdown) {
         return null;
     }
     return htmlToReact(marked(markdown));
-};
+}

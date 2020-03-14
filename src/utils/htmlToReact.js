@@ -14,13 +14,19 @@ export default function(html) {
                 if (!_.isEmpty(node.children)) {
                     return (
                         <ScriptTag key={index} {...node.attribs}>
-                            {_.map(node.children, childNode => convertNodeToElement(childNode, index, _.noop()))}
+                            {_.map(node.children, childNode =>
+                                convertNodeToElement(
+                                    childNode,
+                                    index,
+                                    _.noop(),
+                                ),
+                            )}
                         </ScriptTag>
                     );
                 } else {
-                    return <ScriptTag key={index} {...node.attribs}/>;
+                    return <ScriptTag key={index} {...node.attribs} />;
                 }
             }
-        }
+        },
     });
-};
+}

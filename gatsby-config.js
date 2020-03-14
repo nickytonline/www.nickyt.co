@@ -16,20 +16,18 @@ module.exports = {
             resolve: `gatsby-plugin-stackbit-static-sass`,
             options: {
                 inputFile: `${__dirname}/src/sass/main.scss`,
-                outputFile: `${__dirname}/public/assets/css/main.css`
+                outputFile: `${__dirname}/public/assets/css/main.css`,
             },
         },
         {
             resolve: `gatsby-transformer-remark`,
             options: {
-                plugins: [`gatsby-remark-component`]
-            }
+                plugins: [`gatsby-remark-component`],
+            },
         },
         {
             resolve: `gatsby-remark-page-creator`,
-            options: {
-
-            }
+            options: {},
         },
         {
             resolve: `@stackbit/gatsby-plugin-menus`,
@@ -37,7 +35,7 @@ module.exports = {
                 sourceUrlPath: `fields.url`,
                 pageContextProperty: `menus`,
                 menus: require('./src/data/menus.json'),
-            }
+            },
         },
         // 'gatsby-plugin-offline',
         {
@@ -54,5 +52,5 @@ module.exports = {
                 icon: 'static/images/apple-touch-icon.png',
             },
         },
-    ]
+    ],
 };

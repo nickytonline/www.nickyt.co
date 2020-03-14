@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link as GatsbyLink } from "gatsby"
+import { Link as GatsbyLink } from 'gatsby';
 
 // Since DOM elements <a> cannot receive activeClassName
 // and partiallyActive, destructure the prop here and
@@ -21,13 +21,13 @@ const Link = ({ children, to, activeClassName, partiallyActive, ...other }) => {
             >
                 {children}
             </GatsbyLink>
-        )
+        );
     }
     return (
         <a href={to} {...other}>
             {children}
         </a>
-    )
+    );
 };
 
-export default Link
+export default Link;
