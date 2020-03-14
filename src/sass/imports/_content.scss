@@ -50,23 +50,16 @@
 
 /* Post feed */
 .post-feed {
-    display: -ms-flexbox;
-    display: -webkit-flex;
     display: flex;
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
+
     flex-wrap: wrap;
     margin: 0 -0.83333em 1.66667em;
 
     .post {
-        display: -webkit-flex;
-        display: -ms-flexbox;
         display: flex;
-        -webkit-flex: 0 0 50%;
-        -ms-flex: 0 0 50%;
+
         flex: 0 0 50%;
-        -webkit-flex-direction: column;
-        -ms-flex-direction: column;
+
         flex-direction: column;
         margin-bottom: 1.66667em;
     }
@@ -74,14 +67,11 @@
     .post-inside {
         border: 1px solid _palette(border);
         border-radius: 5px;
-        display: -webkit-flex;
-        display: -ms-flexbox;
+
         display: flex;
-        -webkit-flex: 1 1 auto;
-        -ms-flex: 1 1 auto;
+
         flex: 1 1 auto;
-        -webkit-flex-direction: column;
-        -ms-flex-direction: column;
+
         flex-direction: column;
         margin: 0 0.833333em;
     }
@@ -128,8 +118,6 @@
     }
 
     .post-content {
-        -webkit-flex-grow: 1;
-        -ms-flex: 1;
         flex-grow: 1;
         font-size: 16px;
         padding: 0 1.33333rem;
@@ -160,8 +148,6 @@
 @media only screen and (min-width: 801px) and (max-width: 1000px),
     only screen and (max-width: 600px) {
     .post-feed .post {
-        -webkit-flex: 0 0 100%;
-        -ms-flex: 0 0 100%;
         flex: 0 0 100%;
     }
 }

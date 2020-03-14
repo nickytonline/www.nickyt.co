@@ -3,12 +3,9 @@
  * ----------------------------------------------------------------------------
  */
 .site-footer {
-    -ms-flex-align: center;
-    -webkit-align-items: center;
     align-items: center;
     border-top: 1px solid _palette(border);
-    display: -ms-flexbox;
-    display: -webkit-flex;
+
     display: flex;
     padding-top: 2.5em;
 
@@ -24,8 +21,7 @@
         border: 0;
         color: _palette(primary);
         display: none;
-        -webkit-flex: 0 0 auto;
-        -ms-flex: 0 0 auto;
+
         flex: 0 0 auto;
         height: 30px;
         margin-left: auto;

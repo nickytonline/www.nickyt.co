@@ -23,7 +23,7 @@ a {
     border-bottom: 2px solid _palette(accent);
     color: _palette(secondary);
     text-decoration: none;
-    -webkit-transition: border 0.3s ease, color 0.3s ease;
+
     transition: border 0.3s ease, color 0.3s ease;
 
     &:hover {
@@ -284,7 +284,7 @@ a.button {
     line-height: 1.5;
     padding: 0.25em 35px;
     text-transform: uppercase;
-    -webkit-transition: 0.3s ease;
+
     transition: 0.3s ease;
 
     &:hover,

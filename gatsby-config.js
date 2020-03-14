@@ -52,5 +52,6 @@ module.exports = {
                 icon: 'static/images/apple-touch-icon.png',
             },
         },
+        'gatsby-plugin-postcss',
     ],
 };

@@ -9,9 +9,9 @@
     position: absolute;
     right: 0;
     top: 50%;
-    -webkit-transform: translateY(-50%);
+
     transform: translateY(-50%);
-    -webkit-transition: width 0.15s ease;
+
     transition: width 0.15s ease;
     width: 20px;
 
@@ -22,8 +22,7 @@
         height: 100%;
         position: absolute;
         right: 0;
-        -webkit-transition: -webkit-transform 0.15s ease;
-        -webkit-transition: transform 0.15s ease;
+
         transition: transform 0.15s ease;
         width: 20px;
     }
@@ -42,14 +41,10 @@
         width: 35px;
 
         &:before {
-            -webkit-transform: translate3d(5px, 0, 0) rotate(-45deg)
-                scale(0.78, 1);
             transform: translate3d(5px, 0, 0) rotate(-45deg) scale(0.78, 1);
         }
 
         &:after {
-            -webkit-transform: translate3d(5px, 0, 0) rotate(45deg)
-                scale(0.78, 1);
             transform: translate3d(5px, 0, 0) rotate(45deg) scale(0.78, 1);
         }
     }
@@ -63,7 +58,7 @@
     left: 50%;
     position: absolute;
     top: 50%;
-    -webkit-transform: translate(-50%, -50%);
+
     transform: translate(-50%, -50%);
     width: 16px;
 }
@@ -75,7 +70,7 @@
     left: 50%;
     position: absolute;
     top: 50%;
-    -webkit-transform: translate(-50%, -50%);
+
     transform: translate(-50%, -50%);
     width: 2px;
 }
@@ -95,9 +90,9 @@
     border-width: 2px 0 0 2px;
     left: -1px;
     top: 1px;
-    -webkit-transform: rotate(-45deg);
+
     transform: rotate(-45deg);
-    -webkit-transform-origin: top left;
+
     transform-origin: top left;
 }
 
@@ -105,9 +100,9 @@
     border-width: 2px 2px 0 0;
     right: -1px;
     top: 1px;
-    -webkit-transform: rotate(45deg);
+
     transform: rotate(45deg);
-    -webkit-transform-origin: top right;
+
     transform-origin: top right;
 }
 
@@ -115,8 +110,8 @@
     border-width: 2px 2px 0 0;
     right: 1px;
     top: -1px;
-    -webkit-transform: rotate(-45deg);
+
     transform: rotate(-45deg);
-    -webkit-transform-origin: top right;
+
     transform-origin: top right;
 }
