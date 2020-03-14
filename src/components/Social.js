@@ -6,7 +6,7 @@ import { Link } from '../utils';
 export default class Social extends React.Component {
     render() {
         return (
-            <div className="social-links">
+            <ul className="social-links">
                 {_.map(
                     _.get(this.props, 'pageContext.site.data.social.links'),
                     (link, link_idx) =>
@@ -27,7 +27,7 @@ export default class Social extends React.Component {
                             </Link>
                         ),
                 )}
-            </div>
+            </ul>
         );
     }
 }

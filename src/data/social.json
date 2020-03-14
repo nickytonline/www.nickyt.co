@@ -1,6 +1,12 @@
 {
     "links": [
         {
+            "type": "devto",
+            "title": "DEV",
+            "icon": "fa-dev",
+            "url": "https://dev.to/nickytonline"
+        },
+        {
             "type": "twitter",
             "title": "Twitter",
             "icon": "fa-twitter",
@@ -13,10 +19,22 @@
             "url": "https://github.com/nickytonline"
         },
         {
-            "type": "devto",
-            "title": "DEV",
-            "icon": "fa-dev",
-            "url": "https://dev.to/nickytonline"
+            "type": "instagram",
+            "title": "Instagram",
+            "icon": "fa-instagram",
+            "url": "https://instagram.com/nickytonline"
+        },
+        {
+            "type": "stackoverflow",
+            "title": "Stackoverflow",
+            "icon": "fa-stack-overflow",
+            "url": "https://stackoverflow.com/users/77814/nickytonline"
+        },
+        {
+            "type": "linkedin",
+            "title": "LinkedIn",
+            "icon": "fa-linkedin",
+            "url": "https://www.linkedin.com/in/nickytonline/"
         }
     ]
 }
