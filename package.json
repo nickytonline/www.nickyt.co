@@ -1,38 +1,81 @@
 {
-  "name": "stackbit-fresh-theme",
-  "description": "Stackbit Fresh Theme",
-  "version": "0.0.1",
-  "license": "MIT",
-  "scripts": {
-    "develop": "gatsby develop",
-    "start": "npm run develop",
-    "build": "gatsby build --prefix-paths",
-    "serve": "gatsby serve"
-  },
-  "dependencies": {
-    "@stackbit/gatsby-plugin-menus": "0.0.4",
-    "fs-extra": "^7.0.1",
-    "gatsby": "2.3.30",
-    "gatsby-plugin-manifest": "^2.2.44",
-    "gatsby-plugin-offline": "^3.0.37",
-    "gatsby-plugin-preact": "^3.1.27",
-    "gatsby-plugin-react-helmet": "^3.0.0",
-    "gatsby-source-filesystem": "2.0.28",
-    "gatsby-transformer-remark": "2.3.8",
-    "js-yaml": "^3.12.2",
-    "lodash": "^4.17.11",
-    "marked": "^0.6.1",
-    "moment": "^2.23.0",
-    "moment-strftime": "^0.5.0",
-    "node-sass": "^4.11.0",
-    "node-sass-utils": "^1.1.2",
-    "preact": "^10.3.3",
-    "react": "^16.5.1",
-    "react-dom": "^16.5.1",
-    "react-helmet": "^5.2.0",
-    "react-html-parser": "^2.0.2",
-    "react-script-tag": "^1.1.2",
-    "rehype-react": "^3.0.2",
-    "sprintf-js": "^1.1.2"
-  }
+    "name": "stackbit-fresh-theme",
+    "description": "Stackbit Fresh Theme",
+    "version": "0.0.1",
+    "license": "MIT",
+    "scripts": {
+        "develop": "gatsby develop",
+        "start": "npm run develop",
+        "build": "gatsby build --prefix-paths",
+        "serve": "gatsby serve"
+    },
+    "dependencies": {
+        "@stackbit/gatsby-plugin-menus": "0.0.4",
+        "fs-extra": "^7.0.1",
+        "gatsby": "2.3.30",
+        "gatsby-plugin-manifest": "^2.2.44",
+        "gatsby-plugin-offline": "^3.0.37",
+        "gatsby-plugin-preact": "^3.1.27",
+        "gatsby-plugin-react-helmet": "^3.0.0",
+        "gatsby-source-filesystem": "2.0.28",
+        "gatsby-transformer-remark": "2.3.8",
+        "js-yaml": "^3.12.2",
+        "lodash": "^4.17.11",
+        "marked": "^0.6.1",
+        "moment": "^2.23.0",
+        "moment-strftime": "^0.5.0",
+        "node-sass": "^4.11.0",
+        "node-sass-utils": "^1.1.2",
+        "preact": "^10.3.3",
+        "prettier": "^1.19.1",
+        "react": "^16.5.1",
+        "react-dom": "^16.5.1",
+        "react-helmet": "^5.2.0",
+        "react-html-parser": "^2.0.2",
+        "react-script-tag": "^1.1.2",
+        "rehype-react": "^3.0.2",
+        "sprintf-js": "^1.1.2"
+    },
+    "devDependencies": {
+        "eslint": "^6.8.0",
+        "eslint-config-prettier": "^6.10.0",
+        "eslint-plugin-import": "^2.20.1",
+        "eslint-plugin-jsx-a11y": "^6.2.3",
+        "eslint-plugin-prettier": "^3.1.2",
+        "eslint-plugin-react": "^7.19.0",
+        "husky": "^4.2.3",
+        "lint-staged": "^10.0.8",
+        "stylelint": "^13.2.1",
+        "stylelint-config-recommended": "^3.0.0",
+        "stylelint-scss": "^3.14.2"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
+    },
+    "lint-staged": {
+        "*.{js,jsx,ts,tsx}": [
+            "eslint --fix",
+            "git add"
+        ],
+        "*.json": [
+            "prettier --write",
+            "git add"
+        ],
+        "*.md": [
+            "prettier --write",
+            "git add"
+        ],
+        "*.{sass,scss,css}": [
+            "stylelint --config .styletinrc.json",
+            "git add"
+        ]
+    },
+    "prettier": {
+        "singleQuote": true,
+        "trailingComma": "all",
+        "printWidth": 80,
+        "tabWidth": 4
+    }
 }
