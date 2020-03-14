@@ -131,11 +131,12 @@
     color: _palette(accent);
 }
 
-.social-links {
+ul.social-links {
     margin-top: 1rem;
     display: grid;
     grid-gap: 1rem;
     grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
 
     a {
         align-items: center;
@@ -204,7 +205,7 @@
 
     .site-header-wrap {
         height: 100%;
-        overflow: auto;
+        overflow: hidden;
 
         position: relative;
     }
