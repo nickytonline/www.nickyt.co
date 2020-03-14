@@ -11,7 +11,6 @@
   },
   "dependencies": {
     "@stackbit/gatsby-plugin-menus": "0.0.4",
-    "classnames": "^2.2.6",
     "fs-extra": "^7.0.1",
     "gatsby": "2.3.30",
     "gatsby-plugin-manifest": "^2.2.44",
