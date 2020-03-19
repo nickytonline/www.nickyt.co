@@ -1,7 +1,7 @@
 {
     "siteUrl": "https://www.iamdeveloper.com",
     "layout_style": "overflow",
-    "palette": "green",
+    "palette": "blue",
     "header": {
         "title": "Nick Taylor (he/him)",
         "tagline": "Just some dev at DEV. Big fan of TypeScript, (P)React JavaScript and Node. C#/asp.net once upon a time.",
