@@ -17,6 +17,7 @@
         "gatsby-plugin-offline": "^3.0.37",
         "gatsby-plugin-preact": "^3.1.27",
         "gatsby-plugin-react-helmet": "^3.0.0",
+        "gatsby-plugin-sitemap": "^2.2.30",
         "gatsby-source-filesystem": "2.0.28",
         "gatsby-transformer-remark": "2.3.8",
         "js-yaml": "^3.12.2",
