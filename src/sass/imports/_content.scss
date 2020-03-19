@@ -40,12 +40,15 @@
 }
 
 .post-meta {
-    color: _palette(meta);
     font-size: 14px;
     letter-spacing: 1px;
     line-height: 1.5;
     margin-bottom: 1.66667rem;
     text-transform: uppercase;
+
+    .published {
+        font-size: 0.75em;
+    }
 }
 
 /* Post feed */
