@@ -40,6 +40,7 @@ export default class Body extends React.Component {
                                 : `Welcome to Nick Taylor's Web Site`
                         }
                     />
+                    <link rel="preload" href="https://fonts.googleapis.com" />
                     <link
                         rel="stylesheet"
                         href={safePrefix('assets/css/main.css')}
