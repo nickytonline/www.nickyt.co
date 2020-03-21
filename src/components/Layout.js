@@ -41,10 +41,6 @@ export default class Body extends React.Component {
                         }
                     />
                     <link
-                        href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i"
-                        rel="stylesheet"
-                    />
-                    <link
                         rel="stylesheet"
                         href={safePrefix('assets/css/main.css')}
                     />
