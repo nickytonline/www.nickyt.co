@@ -69,4 +69,5 @@ Also, for those interested, here’s a big list I made for [Frontend Developer R
 -   Whiteboard: [VIZ-PRO Dry Erase Board/Whiteboard](https://www.amazon.ca/gp/product/B01461WT9S)
 -   Working from home sneakers: [Under Armour Men’s Charged Commit 2.0 Cross Trainer](https://www.amazon.ca/gp/product/B07HKTJN5F/ref=ppx_yo_dt_b_asin_title_o00_s00?ie=UTF8&psc=1)
 -   Footrest for standing desk: [HOMCOM Ergonomic Footrest Adjustable Height and Angle Home Office Foot Rest Stool](https://www.amazon.ca/gp/product/B07331MQNW/ref=ppx_yo_dt_b_asin_title_o04_s00?ie=UTF8&psc=1)
+-   Standing Desk Mat: [iCustomRug Ergonomic Anti Fatigue Mat](https://www.amazon.ca/gp/product/B0751N2V2Z)
 -   Office air purifier: [LEVOIT Air Purifier Core 300](https://www.amazon.ca/gp/product/B07S3D4MRJ/ref=ppx_yo_dt_b_asin_title_o08_s00?ie=UTF8&psc=1)
