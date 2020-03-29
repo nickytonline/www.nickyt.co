@@ -16,8 +16,9 @@
     input[type='button'],
     input[type='reset'],
     a.button {
-        background: _palette(accent-blue);
+        background: 0;
         border-color: _palette(accent-blue);
+        color: _palette(secondary);
 
         &:hover,
         &:focus,
