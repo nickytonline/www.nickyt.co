@@ -93,3 +93,8 @@ to = "/posts/my-2018-year-in-review-2f0k/"
 status = 301
 force = true
 
+[[redirects]]
+from = "/blog/2020-01-21-a-new-year-a-new-start-im-joining-the-dev-team/"
+to = "/posts/a-new-year-a-new-start-i-m-joining-the-dev-team-3ap0/"
+status = 301
+force = true
