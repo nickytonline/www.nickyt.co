@@ -2,6 +2,9 @@
 publish = "public"
 command = "./stackbit-build.sh"
 
+[[plugins]]
+package = "netlify-plugin-gatsby-cache"
+
 [[redirects]]
 from = "https://webflow.iamdeveloper.com/*"
 to = "http://nick-taylors-first-project.webflow.io:splat"
