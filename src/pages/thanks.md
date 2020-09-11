@@ -10,7 +10,7 @@ template: page
 Thanks to all the wonderful projects that made it possible to build this blog.
 
 - [DEV](https://dev.to 'DEV website')
-- [Stackbit](stackbit.com 'Stackbit website')
+- [Stackbit](https://www.stackbit.com 'Stackbit website')
 - [Babel](https://babeljs.io 'Babel website')
 - [React](https://reactjs.org 'React website')
 - [Gatsby](https://gatsbyjs.org 'Gatsby JS website')
