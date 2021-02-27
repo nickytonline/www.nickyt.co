@@ -279,10 +279,16 @@ async function processArticleEmbeds(embeds, document) {
       'ltag__link box-flex align-center flex-wrap space-center md:flex-nowrap md:space-after';
 
     for (const link of articleContent.querySelectorAll('.ltag__link__link')) {
-      link.setAttribute('href', updateArticleUrl(link.getAttribute('href'), isFlowState));
+      const url = link.getAttribute('href');
+
+      link.setAttribute('href', updateArticleUrl(url, isFlowState));
 
       if (!link.querySelector('.ltag__link__pic')) {
         link.removeAttribute('class');
+      } else {
+        if (/\/nickytonline$/.test(url)) {
+          link.replaceWith(link.querySelector('.ltag__link__picçççç').cloneNode(true));
+        }
       }
     }
 
