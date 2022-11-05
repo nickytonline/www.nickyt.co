@@ -4,8 +4,8 @@ BRANCH_NAME="chore_automated_update_blog_posts_$(date +%s)"
 git branch $BRANCH_NAME
 git switch $BRANCH_NAME
 
-# This is the only file we want to commit
-git add src/pages/streaming.md
+# There are potentially multiple files if the blog post has images.
+git add .
 
 # See if we have any changes. We should.
 if [[ -n "$(git status --porcelain)" ]]; then
