@@ -12,7 +12,7 @@ if [[ -n "$(git status --porcelain)" ]]; then
   echo "Creating PR \"$PR_TITLE\" for branch $BRANCH_NAME"
   git commit -m "$PR_TITLE"
   git push origin $BRANCH_NAME
-  gh pr create --title "$PR_TITLE" --body "This is an automated PR to update blog posts"
+  gh pr create --title "$PR_TITLE" --body "This is an automated PR to update blog posts" --label "automerge"
 else
   # Shouldn't end up here, but log that there was nothing to sync
   echo "Looks like there was nothing to update."
