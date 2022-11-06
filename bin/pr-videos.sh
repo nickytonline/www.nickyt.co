@@ -13,6 +13,7 @@ if [[ -n "$(git status --porcelain)" ]]; then
   git commit -m "$PR_TITLE"
   git push origin $BRANCH_NAME
   gh pr create --title "$PR_TITLE" --body "This is an automated PR to update videos on the streaming page"
+  gh pr merge --auto --delete-branch --squash --submit "$BRANCH_NAME"
 else
   # Shouldn't end up here, but log that there was nothing to sync
   echo "Looks like there was nothing to update."
