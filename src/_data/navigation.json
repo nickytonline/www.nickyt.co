@@ -21,6 +21,11 @@
       "external": true
     },
     {
+      "text": "Discord",
+      "url": "https://discord.iamdeveloper.com",
+      "external": true
+    },
+    {
       "text": "Talks",
       "url": "/pages/talks",
       "external": false
