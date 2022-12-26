@@ -9,7 +9,7 @@ const __dirname = url.fileURLToPath(new URL('.', import.meta.url));
 const NEWSLETTER_DIRECTORY = path.join(__dirname, '..', 'src', 'newsletter');
 const parser = new Parser();
 const feed = await parser.parseURL(site.newsletterRss);
-const {DEV_API_KEY} = process.env;
+const {DEV_API_KEY = 'ms5GDq2QZ3MvmayvwncVzqRn'} = process.env;
 const DEV_TO_API_URL = 'https://dev.to/api';
 
 function generateEmbed(url, forDevTo = false) {
@@ -19,7 +19,7 @@ function generateEmbed(url, forDevTo = false) {
 const twitterEmbedMatcher =
   /(<p><html>.+?href="(?<twitterUrl>https:\/\/twitter.com\/[^\/]+?\/status\/\d+)\?ref_src=twsrc%5Etfw">.+?<\/html><\/p>)|(<html><body>.+?href="(?<twitterUrl2>https:\/\/twitter.com\/[^\/]+?\/status\/\d+)\?ref_src=twsrc%5Etfw[^"]*">.+?<\/body><\/html>)/gms;
 const youtubeEmbedMatcher =
-  /<a (?:class="video"\s+)?href="(?<YouTubeUrl>https:\/\/(youtu.be|(www\.)?youtube.com)[^"]+?)">.+?<\/a>/gms;
+  /\n<a (?:class="video"\s+)?href="(?<YouTubeUrl>https:\/\/(youtu.be|(www\.)?youtube.com)[^"@]+?)">.+?<\/a>/gms;
 
 const devToEmbedsMatcher = /\n(https:\/\/dev.to\/.+?)\n/gms;
 
@@ -98,7 +98,7 @@ async function generateNewsletterPost(feedItem) {
   const publishedToDevTo = existsSync(newsIssuePath);
 
   await fs.writeFile(newsIssuePath, markdown);
-
+  return;
   if (publishedToDevTo) {
     console.log(`Newsletter ${filename} already published to dev.to`);
     return;
