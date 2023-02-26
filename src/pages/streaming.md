@@ -3,6 +3,8 @@ title: Streaming
 metaDesc: 'Live Coding and other streaming projects that Nick Taylor does.'
 ---
 
+<p class="weight-bold">Check out my <a href="/pages/stream-schedule">streaming schedule</a> to <em>see when I'm live</em>!</p>
+
 I
 [started live coding on Twitch](https://www.iamdeveloper.com/posts/i-ve-started-to-live-code-on-twitch-for-dev-13cn)
 at the end of March 2020. It started off as a small experiment, and then I
@@ -12,8 +14,6 @@ the open source project I worked on, [Forem](https://github.com/forem/forem).
 These days, I only stream on [my Twitch stream](https://live.iamdeveloper.com)
 and I post most of them to
 [my YouTube channel](https://youtube.iamdeveloper.com).
-
-Check out the [streaming schedule](/pages/streaming-schedule) to see when I'm live
 
 ## Latest Videos
 
