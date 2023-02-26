@@ -74,7 +74,8 @@ async function getStreamSchedule(): Promise<StreamGuestInfo[]> {
   }
 
   const {records} = (await response.json()) as {records: GuestRecord[]};
-  const schedule = records.map(({fields}) => {
+  // Can't use satifies. Functions bundler doesn't support it yet
+  const schedule: StreamGuestInfo[] = records.map(({fields}) => {
     const {
       Date: date,
       Name: name,
@@ -88,7 +89,7 @@ async function getStreamSchedule(): Promise<StreamGuestInfo[]> {
       title,
       streamTitle,
     };
-  }) satisfies StreamGuestInfo[];
+  });
 
   return schedule;
 }
