@@ -72,7 +72,7 @@ function sanitizeContent(rawContent, forDevTo = false) {
 }
 
 async function generateNewsletterPost(feedItem) {
-  const {title, link: canonicalUrl, content, contentSnippet, isoDate} = feedItem;
+  const {title, link: canonicalUrl, content, contentSnippet, isoDate, tags = ['newsletter']} = feedItem;
 
   const jsonFrontmatter = {
     title,
@@ -106,19 +106,21 @@ async function generateNewsletterPost(feedItem) {
   }
 
   try {
-    const main_image = socialImage(title, contentSnippet);
+    // dev.to doesn't support webp for cover images so explicitly render as png
+    const main_image = socialImage(title, contentSnippet).replace(',f_auto', ',f_png');
     const article = {
       article: {
         title,
         published: true,
-        body_markdown: `<!-- cover image: ${main_image} -->\n\n${sanitizeContent(
+        body_markdown: `${sanitizeContent(
           content,
           true
         )}\nIf you liked this newsletter, you can [subscribe](https://www.iamdeveloper.com/pages/newsletter/) or if RSS is your jam, you can also [subscribe via RSS](https://www.iamdeveloper.com/newsletter.rss).`,
-        tags: ['newsletter'],
+        // dev.to onlys supports up to 4 tags
+        tags: tags.length > 3 ? tags.slice(0, 3) : tags,
         series: 'Yet Another Newsletter LOL',
         canonical_url: canonicalUrl,
-        // main_image, skipping for now as a Cloudinary URL in a dev.to Cloudinary URL goes boom.
+        main_image
       },
     };
 
