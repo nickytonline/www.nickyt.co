@@ -2,7 +2,8 @@
 {
   "title": "Debugging JavaScript",
   "excerpt": "Learn how to debug JavaScript in the front-end/back-end as well as how to use your browser to debug other issues.",
-  "date": "2021-04-02T00:00:00.000Z",
+  "venue": "Virtual Coffee Lunch & Learn",
+  "date": "2021-04-02T12:00:00.000Z",
   "tags": [
     "debugging",
     "devtools",

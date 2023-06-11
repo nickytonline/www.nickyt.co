@@ -2,7 +2,8 @@
 {
   "title": "AppWrite Hacktoberfest Kickoff",
   "excerpt": "Nick Taylor talks about Forem and how you can contribute to the project during and after Hacktoberfest 2021.",
-  "date": "2021-04-02T00:00:00.000Z",
+  "venue": "AppWrite Hacktoberfest Kickoff",
+  "date": "2021-04-02T12:00:00.000Z",
   "tags": [
     "hacktoberfest",
     "open source",

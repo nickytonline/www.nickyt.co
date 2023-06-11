@@ -43,6 +43,7 @@ async function createTalkFile(talk) {
   const jsonFrontmatter = {
     title,
     excerpt: summary,
+    venue: venue.name,
     date: date.toISOString(),
     tags: [...tags, 'talks'],
     template: 'post',
@@ -51,7 +52,11 @@ async function createTalkFile(talk) {
   const markdownBody = `
       ${video && video.type === 'youtube' ? `{% embed "${video.url}" %}` : ''}
       ${video && video.type === 'vimeo' ? `{% embed "${video.url}" %}` : ''}
-      <p><span class="weight-bold">Venue:</span> <a href="${venue.url}">${
+      ${
+        video && video.type === 'custom'
+          ? `<a href="${video.url}" title="${title}"><img src="${video.image.url}" width="${video.image.width}" height="${video.image.height}" /></a>`
+          : ''
+      }<p><span class="weight-bold">Venue:</span> <a href="${venue.url}">${
     venue.name
   }</a></p>
       ${summary ? `<span class="weight-bold">Summary:</span> ${summary}</p>` : ''}
