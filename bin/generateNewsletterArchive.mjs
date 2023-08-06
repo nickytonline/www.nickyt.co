@@ -6,7 +6,9 @@ import site from '../src/_data/site.json' assert {type: 'json'};
 import {socialImage} from '../src/shortCodes/index.js';
 import slugify from 'slugify';
 
-if (process.env.NODE_ENV === 'development') {
+const isDevMode = process.env.NODE_ENV === 'development';
+
+if (isDevMode) {
   const dotenv = await import('dotenv');
   // add code to import env variables using dotenv
   dotenv.config();
@@ -30,6 +32,7 @@ const youtubeEmbedMatcher =
 const twitchEmbedMatcher =
   /\n<a\s+href="(?<TwitchUrl>https:\/\/(?:www\.)?twitch.tv\/[^"]+)">.+?<\/a>/gms;
 const tagsMatcher = /<!-- tags:\s+(?<tags>.+?)\s+-->/s
+const codepenEmbedMatcher = /<a\s+href="(?<url>[^?"]+)(?:\?[^"]+)?">.+?<\/a>/gms;
 
 const devToEmbedsMatcher = /\n(https:\/\/dev.to\/.+?)\n/gms;
 
@@ -68,6 +71,17 @@ function sanitizeContent(rawContent, forDevTo = false) {
     updatedContent = updatedContent.replace(
       twitchEmbed[0],
       generateEmbed(TwitchUrl, forDevTo)
+    );
+  }
+
+    // Replace Twitch embeds with embed shortcodes
+  const codepenEmbeds = updatedContent.matchAll(codepenEmbedMatcher);
+
+  for (const codepenEmbed of codepenEmbeds) {
+    const {url} = codepenEmbed.groups;
+    updatedContent = updatedContent.replace(
+      codepenEmbed[0],
+      generateEmbed(url, forDevTo, 'codepen')
     );
   }
 
@@ -123,7 +137,7 @@ async function generateNewsletterPost(feedItem) {
 
   await fs.writeFile(newsIssuePath, markdown);
 
-  if (publishedToDevTo) {
+  if (publishedToDevTo && !isDevMode) {
     console.log(`Newsletter ${filename} already published to dev.to`);
     return;
   }
