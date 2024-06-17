@@ -223,7 +223,7 @@ async function createPostFile(post) {
     markdownBody = body_markdown;
   }
 
-  const markdown = `---\ntitle: "${title}"\ntags:[${tags.map(
+  const markdown = `---\ntitle: "${title}"\ntags: [${tags.map(
     (t) => `"${t}"`,
   )}]\nauthors: nickytonline\n\slug: ${slug}\ndescription: "${excerpt}"\n---\n\n${sanitizeMarkdownEmbeds(
     markdownBody,
