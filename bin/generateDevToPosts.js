@@ -9,7 +9,7 @@ const { DEV_API_KEY } = process.env;
 const SLUG_INCLUSION_LIST = require("./slugInclusionList.json");
 
 const DEV_TO_API_URL = "https://dev.to/api";
-const POSTS_DIRECTORY = path.join(__dirname, "../src/open-sauced-blog");
+const POSTS_DIRECTORY = path.join(__dirname, "../src/blog");
 const VSCODE_TIPS_POSTS_DIRECTORY = path.join(__dirname, "../src/vscodetips");
 const POSTS_IMAGES_PUBLIC_DIRECTORY = "/images/posts";
 const POSTS_IMAGES_DIRECTORY = path.join(
@@ -67,14 +67,14 @@ function sanitizeMarkdownEmbeds(markdown) {
   const sanitizedMarkdown = markdown
     .replaceAll(
       /{%\s*?(?<shortcode>[^\s+]*)\s+?(?<id>[^'"\s]+)\s*?%}/g,
-      '<a href="$2">$2</a>',
+      '{% $1 "$2" %}',
     )
-    // Fixes a liquid JS issues when {{ code }} is used in a markdown code block
-    // see https://github.com/11ty/eleventy/issues/2273
-    .replaceAll(
-      /```(?<language>.*)\n(?<code>(.|\n)+?)\n```/g,
-      "```$1\n{% raw %}\n$2\n{% endraw %}\n```",
-    )
+    // // Fixes a liquid JS issues when {{ code }} is used in a markdown code block
+    // // see https://github.com/11ty/eleventy/issues/2273
+    // .replaceAll(
+    //   /```(?<language>.*)\n(?<code>(.|\n)+?)\n```/g,
+    //   "```$1\n{% raw %}\n$2\n{% endraw %}\n```",
+    // )
     // We need to add raw shortcodes to prevent shortcodes within code blocks from rendering.
     // For now, this only supports single-line code blocks.
     .replaceAll(/(`{%[^%]+%}`)/g, "{% raw %}$1{% endraw %}");
@@ -223,11 +223,11 @@ async function createPostFile(post) {
     markdownBody = body_markdown;
   }
 
-  const markdown = `---\ntitle: "${title}"\ntags: [${tags.map(
-    (t) => `"${t}"`,
-  )}]\nauthors: nickytonline\n\slug: ${slug}\ndescription: "${excerpt}"\n---\n\n${sanitizeMarkdownEmbeds(
-    markdownBody,
-  ).trim()}\n`;
+  const markdown = `---json\n${JSON.stringify(
+    jsonFrontmatter,
+    null,
+    2,
+  )}\n---\n\n${sanitizeMarkdownEmbeds(markdownBody).trim()}\n`;
 
   const basePath = tags.includes("vscodetips")
     ? path.join(
@@ -235,10 +235,7 @@ async function createPostFile(post) {
         new Date(date).getFullYear().toString(),
       )
     : POSTS_DIRECTORY;
-  const postFile = path.join(
-    basePath,
-    `${date.split("T")[0]}-${slug.replace(/\-[^-]+$/, "")}.md`,
-  );
+  const postFile = path.join(basePath, `${slug}.md`);
   await fs.writeFile(postFile, markdown);
 
   // Checking for a backtick before the Twitter embed so that we're not pulling in a code example of an embed.
@@ -472,12 +469,37 @@ async function updateTwitterEmbeds(twitterEmbeds, filepath) {
 
   // Only publish posts that are not under the orgs I'm a part of on dev.to organization.
   for (const post of posts.filter((post) => {
-    return ["opensauced"].includes(post.organization?.username);
+    return (
+      !["vscodetips", "virtualcoffee"].includes(post.organization?.username) ||
+      (post.organization?.username === "vscodetips" &&
+        post.tag_list.includes("vscodetips"))
+    );
   })) {
+    if (post.canonical_url.startsWith("https://www.iamdeveloper.com/posts/")) {
+      post.canonical_url = post.canonical_url.replace(
+        "https://www.iamdeveloper.com/posts/",
+        "https://www.nickyt.co/blog/",
+      );
+    }
+    // Newsletter posts are not published to the blog. The blog publishes the newsletter to DEV.
+    if (/<!-- my newsletter -->\s*$/.test(post.body_markdown)) {
+      console.warn(`Skipping newsletter post ${post.title}`);
+      continue;
+    }
+    const updatedCoverImage = await saveMarkdownImageUrl(post.cover_image);
+    const { markdown, imagesToSave } = await updateMarkdownImageUrls(
+      post.body_markdown,
+    );
+
+    await Promise.all([
+      saveMarkdownImages(imagesToSave),
+      getDevBlogPostEmbedsMarkup(markdown, blogPostEmbeds),
+    ]);
+
     const updatedPost = {
       ...post,
-      // cover_image: updatedCoverImage,
-      // body_markdown: markdown,
+      cover_image: updatedCoverImage,
+      body_markdown: markdown,
     };
     const { status } = await createPostFile(updatedPost);
 
@@ -491,8 +513,8 @@ async function updateTwitterEmbeds(twitterEmbeds, filepath) {
   }
 
   try {
-    // await updateTwitterEmbeds(twitterEmbeds, TWITTER_EMBEDS_FILE);
-    // await updateBlogPostEmbeds(blogPostEmbeds, EMBEDDED_POSTS_MARKUP_FILE);
+    await updateTwitterEmbeds(twitterEmbeds, TWITTER_EMBEDS_FILE);
+    await updateBlogPostEmbeds(blogPostEmbeds, EMBEDDED_POSTS_MARKUP_FILE);
   } catch (error) {
     console.error("unable to update Twitter or DEV embeds", error);
   }
