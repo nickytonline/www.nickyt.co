@@ -64,3 +64,17 @@ You can also set the resolution of the preview
 ![Camera preview in Litra Glow software](https://www.nickyt.co/images/posts/_uploads_articles_e06rg09hm9l2c4da02mn.png)
 
 This was a really nice upgrade for me, and again, I know there are better lights out there, but for 80$ CAD + taxes, this is a really great budget light for streaming/meetings that you should consider.
+
+<!-- places to follow me -->
+
+Places you can follow me:
+
+YouTube 🎬    https://nickyt.tube
+Twitch 🎬    https://twitch.tv/nickytonline
+GitHub 💻     https://github.com/nickytonline
+Community 👾  https://iamdeveloper.discord.com
+Twitter 🐦    https://twitter.com/nickytonline
+Threads 🧵    https://www.threads.net/@nickytonline
+Podcast 🎙    https://pod.nickyt.co
+One Tip a Week ☝️ https://onetipaweek.com/subscribe
+Blog 🗒️    https://nickyt.co

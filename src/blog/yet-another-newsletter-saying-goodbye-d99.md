@@ -18,3 +18,17 @@ Having said that, I do want to thank all of you who have subscribed over the pas
 It's not all doom and gloom, though. I'm going to be putting more of my energy into my live stream, [nickyt.live](https://nickyt.live) if you weren't aware, as well as what, I think, might be a bit more unique in terms of a newsletter/video shorts, [OneTipAWeek.com](https://onetipaweek.com). I'm pretty busy with work and streaming atm, so not sure when I will start OneTipAWeek.com, but you are welcome to [subscribe](https://onetipaweek.com/subscribe).
 
 Thanks, peeps!
+
+<!-- places to follow me -->
+
+Places you can follow me:
+
+YouTube 🎬    https://nickyt.tube
+Twitch 🎬    https://twitch.tv/nickytonline
+GitHub 💻     https://github.com/nickytonline
+Community 👾  https://iamdeveloper.discord.com
+Twitter 🐦    https://twitter.com/nickytonline
+Threads 🧵    https://www.threads.net/@nickytonline
+Podcast 🎙    https://pod.nickyt.co
+One Tip a Week ☝️ https://onetipaweek.com/subscribe
+Blog 🗒️    https://nickyt.co

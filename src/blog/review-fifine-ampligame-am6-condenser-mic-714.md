@@ -72,3 +72,17 @@ If you're looking for a budget microphone, the AM6 packs a lot of punch for the 
 
 * [AM6 on amazon.ca](https://www.amazon.ca/Microphone-Streaming-Cancellation-Twitch-AMPLIGAME-AM6/dp/B0CSFZF62Y)
 * [AM6 on FIFINE official website](https://fifinemicrophone.com/products/fifine-ampligame-am6)
+
+<!-- places to follow me -->
+
+Places you can follow me:
+
+YouTube 🎬    https://nickyt.tube
+Twitch 🎬    https://twitch.tv/nickytonline
+GitHub 💻     https://github.com/nickytonline
+Community 👾  https://iamdeveloper.discord.com
+Twitter 🐦    https://twitter.com/nickytonline
+Threads 🧵    https://www.threads.net/@nickytonline
+Podcast 🎙    https://pod.nickyt.co
+One Tip a Week ☝️ https://onetipaweek.com/subscribe
+Blog 🗒️    https://nickyt.co

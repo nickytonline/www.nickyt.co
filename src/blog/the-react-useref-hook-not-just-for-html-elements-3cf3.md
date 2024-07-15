@@ -1,7 +1,7 @@
 ---json
 {
   "title": "The React useRef Hook: Not Just for DOM Elements",
-  "excerpt": "In this post, we'll cover what the useRef hook is, some examples of how it can be used, and when you...",
+  "excerpt": "In this post, we'll cover what the useRef hook is, some examples of how it can be used, and when it...",
   "date": "2024-07-08T04:38:17.388Z",
   "tags": [
     "react",
@@ -15,7 +15,7 @@
 }
 ---
 
-In this post, we'll cover what the `useRef` hook is, some examples of how it can be used, and when you shouldn't use it.
+In this post, we'll cover what the `useRef` hook is, some examples of how it can be used, and when it shouldn't be used.
 
 ## What is useRef?
 

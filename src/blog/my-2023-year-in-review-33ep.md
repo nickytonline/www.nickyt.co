@@ -183,3 +183,17 @@ What a whirlwind year 2023 was. It started off with coming back from Christmas b
 I'm pumped for 2024! How about you?
 
 Photo by <a href="https://unsplash.com/@kajtek?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Kajetan Sumila</a> on <a href="https://unsplash.com/photos/a-screenshot-of-a-computer-bxaqUeVIGHU?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+
+<!-- places to follow me -->
+
+Places you can follow me:
+
+YouTube 🎬    https://nickyt.tube
+Twitch 🎬    https://twitch.tv/nickytonline
+GitHub 💻     https://github.com/nickytonline
+Community 👾  https://iamdeveloper.discord.com
+Twitter 🐦    https://twitter.com/nickytonline
+Threads 🧵    https://www.threads.net/@nickytonline
+Podcast 🎙    https://pod.nickyt.co
+One Tip a Week ☝️ https://onetipaweek.com/subscribe
+Blog 🗒️    https://nickyt.co

@@ -152,6 +152,20 @@ type ToggleSwitchProps = {
 
 And boom! I now had what I wanted. Check out the [TypeScript Playground example](https://www.typescriptlang.org/play?#code/C4TwDgpgBAKg9gcwQGwgZQO4EtgGMAWACgE5xgDOUAvFAN4BQUUAdgIYC2EAXFOcMVmYIA3IygEIuANYQAJjwBGcOKlbNRTfGtmp4SVDwAUASmoA+KADc4WWRt5YAXhAD8PAETl27qAB8o7sgIPv7uCqzkEO72uMgR5AByHBDkbrz8giL0AL5QAGRQhrRQrAKsADKsChDIPHwCQsIlZZXVyKiyAEIgacwQlhDEULn+xaVYFVU1Hd11GY3NE601vf2Dw8ai9AD021AA6ljt4nDsYHGC9LhwzHxQYKQUPHoo6Nh4RI+UNAxMfyzJDzuAA0Yn+Emkch4-AArhBQf9NNpdIhXkZTFQLLRsgjEeQnNwAuFIiCwX9YvEkpxyB5yKcIABaCnkcikxGLSZtDwwfBYSh8kpQOJtNmI8ac6ZyWYBWwM4BwBl0zgMmoQTjMYDuHL0HZ7fY3ADkwBOZwuzCuNzuDzI5EOwHwAEEWlNarBUahMDgCCQbdQ6GSmGxOEDceD8JIZPIoLD4QGoFpmDoIC8DIUMVicXH8c4PMSoqHyXEWVSUrT6Uyi6yC0xxctXe4eQKBawhS7SdkdbsDobjddTaxLtdbsbrRQ7Y7nW0ZiBnu63l7Pr6fnGg4T3KKwxGodHiHDq-Hkcm5+jzHRM+zs2u8xvC5TkjSAkrGcyq2Tay7px5ZfLFeXVerNRyIA) to see it in action.
 
+<!-- places to follow me -->
+
+Places you can follow me:
+
+YouTube 🎬    https://nickyt.tube
+Twitch 🎬    https://twitch.tv/nickytonline
+GitHub 💻     https://github.com/nickytonline
+Community 👾  https://iamdeveloper.discord.com
+Twitter 🐦    https://twitter.com/nickytonline
+Threads 🧵    https://www.threads.net/@nickytonline
+Podcast 🎙    https://pod.nickyt.co
+One Tip a Week ☝️ https://onetipaweek.com/subscribe
+Blog 🗒️    https://nickyt.co
+
 ![Code snippet showing the never type working](https://www.nickyt.co/images/posts/_uploads_articles_ruo4onzelne1wvjb00ev.png)
 
 ## Conclusion
