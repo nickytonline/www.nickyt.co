@@ -82,3 +82,17 @@ So lots of free routes, but certainly easier if you're on Windows.
 ---
 
 Until the next one!
+
+<!-- places to follow me -->
+
+Places you can follow me:
+
+YouTube 🎬    https://nickyt.tube
+Twitch 🎬    https://twitch.tv/nickytonline
+GitHub 💻     https://github.com/nickytonline
+Community 👾  https://iamdeveloper.discord.com
+Twitter 🐦    https://twitter.com/nickytonline
+Threads 🧵    https://www.threads.net/@nickytonline
+Podcast 🎙    https://pod.nickyt.co
+One Tip a Week ☝️ https://onetipaweek.com/subscribe
+Blog 🗒️    https://nickyt.co

@@ -37,3 +37,17 @@ Looking to learn more about open source? Come [join our community](https://disco
 Stay saucy friends! 🍕
 
 Photo by <a href="https://unsplash.com/@v_uk_europe?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Vit Ch</a> on <a href="https://unsplash.com/photos/Oxb84ENcFfU?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+
+<!-- places to follow me -->
+
+Places you can follow me:
+
+YouTube 🎬    https://nickyt.tube
+Twitch 🎬    https://twitch.tv/nickytonline
+GitHub 💻     https://github.com/nickytonline
+Community 👾  https://iamdeveloper.discord.com
+Twitter 🐦    https://twitter.com/nickytonline
+Threads 🧵    https://www.threads.net/@nickytonline
+Podcast 🎙    https://pod.nickyt.co
+One Tip a Week ☝️ https://onetipaweek.com/subscribe
+Blog 🗒️    https://nickyt.co
