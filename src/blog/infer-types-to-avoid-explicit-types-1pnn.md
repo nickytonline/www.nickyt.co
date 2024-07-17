@@ -220,3 +220,17 @@ You can see this in action in a [TypeScript playground](https://www.typescriptla
 ## Wrap it up!
 
 Types are great, and so is TypeScript, but that doesn't mean you need to type everything. Whenever possible, lean on type inference, and explicitly type when necessary.
+
+<!-- places to follow me -->
+
+Places you can follow me:
+
+YouTube 🎬    https://nickyt.tube
+Twitch 🎬    https://twitch.tv/nickytonline
+GitHub 💻     https://github.com/nickytonline
+Community 👾  https://iamdeveloper.discord.com
+Twitter 🐦    https://twitter.com/nickytonline
+Threads 🧵    https://www.threads.net/@nickytonline
+Podcast 🎙    https://pod.nickyt.co
+One Tip a Week ☝️ https://onetipaweek.com/subscribe
+Blog 🗒️    https://nickyt.co

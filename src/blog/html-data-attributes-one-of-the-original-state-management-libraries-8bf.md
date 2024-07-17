@@ -10,7 +10,7 @@
   ],
   "cover_image": "https://www.nickyt.co/images/posts/_cdn-cgi_image_width=1000,height=420,fit=cover,gravity=auto,format=auto_https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Ft75ycfq41xj3y82ihzjs.png",
   "canonical_url": "https://www.nickyt.co/blog/html-data-attributes-one-of-the-original-state-management-libraries-8bf/",
-  "reading_time_minutes": 3,
+  "reading_time_minutes": 4,
   "template": "post"
 }
 ---
@@ -91,3 +91,17 @@ If you use the browser tools to inspect the home page of DEV, you'll see that th
 State management libraries are definitely useful in certain contexts, but sometimes leveraging what the platform gives you, like data attributes, can be beneficial for your use case.
 
 `<p data-bye="That's all folks">Later</p>`
+
+<!-- places to follow me -->
+
+Places you can follow me:
+
+YouTube 🎬    https://nickyt.tube
+Twitch 🎬    https://twitch.tv/nickytonline
+GitHub 💻     https://github.com/nickytonline
+Community 👾  https://iamdeveloper.discord.com
+Twitter 🐦    https://twitter.com/nickytonline
+Threads 🧵    https://www.threads.net/@nickytonline
+Podcast 🎙    https://pod.nickyt.co
+One Tip a Week ☝️ https://onetipaweek.com/subscribe
+Blog 🗒️    https://nickyt.co

@@ -11,7 +11,7 @@
   ],
   "cover_image": "https://www.nickyt.co/images/posts/_cdn-cgi_image_width=1000,height=420,fit=cover,gravity=auto,format=auto_https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Ffp8ih049mqfs4032ior5.png",
   "canonical_url": "https://www.nickyt.co/blog/tools-that-keep-me-productive-1no5/",
-  "reading_time_minutes": 7,
+  "reading_time_minutes": 8,
   "template": "post"
 }
 ---
@@ -177,3 +177,17 @@ I don't have many CLI tools, but here are some of my go-to ones:
 If you're curious about the reset of my setup like hardware and office setup or what I bring when I'm on the go, feel free to check out [my uses page](https://nickyt.co/uses).
 
 Until the next one!
+
+<!-- places to follow me -->
+
+Places you can follow me:
+
+YouTube 🎬    https://nickyt.tube
+Twitch 🎬    https://twitch.tv/nickytonline
+GitHub 💻     https://github.com/nickytonline
+Community 👾  https://iamdeveloper.discord.com
+Twitter 🐦    https://twitter.com/nickytonline
+Threads 🧵    https://www.threads.net/@nickytonline
+Podcast 🎙    https://pod.nickyt.co
+One Tip a Week ☝️ https://onetipaweek.com/subscribe
+Blog 🗒️    https://nickyt.co
