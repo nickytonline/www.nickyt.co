@@ -124,3 +124,4 @@ Regexes are super powerful for manipulating text, and now you’re armed with so
 - [Regular Expressions | MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)
 - [regexper](https://regexper.com/) (Thanks @link2twenty!)
 - [VerbalExpressions](https://github.com/VerbalExpressions) repository (Thanks @citizen428!)
+- [cyrilex](https://extendsclass.com/regex-tester.html)
