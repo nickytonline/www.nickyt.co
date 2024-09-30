@@ -251,9 +251,9 @@ This extension utilizes [OpenSauced's StarSearch](https://opensauced.pizza/blog/
 
 Curious about StarSearch? 👇
 
-{% embed "https://dev.to/bekahhw/creating-open-source-connections-1ai2" %}
+{% embed "https://opensauced.pizza/blog/open-source-insights-with-starsearch" %}
 
-This example showcases how you can leverage external APIs and services to create powerful, context-aware extensions that enhance the Copilot experience.
+This POC showcases how you can leverage external APIs and services to create powerful, context-aware extensions that enhance the Copilot experience.
 
 {% embed "https://www.youtube.com/watch?v=3HdFMLmNN64" %}
 
